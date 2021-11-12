@@ -143,7 +143,7 @@ func resourceProjectCreate(ctx context.Context, d *schema.ResourceData, m interf
 
 func resourceProjectUpdate(ctx context.Context, d *schema.ResourceData, m interface{}) diag.Diagnostics {
 	client := m.(*rtd.Client)
-	err := client.UpdateProject(ctx, updateReqest(d))
+	err := client.UpdateProject(ctx, d.Id(), updateReqest(d))
 	if err != nil {
 		return diag.FromErr(err)
 	}
@@ -152,7 +152,7 @@ func resourceProjectUpdate(ctx context.Context, d *schema.ResourceData, m interf
 
 func resourceProjectDelete(ctx context.Context, d *schema.ResourceData, m interface{}) diag.Diagnostics {
 	client := m.(*rtd.Client)
-	err := client.DeleteProject(ctx, d.Get("name").(string))
+	err := client.DeleteProject(ctx, d.Id())
 	if err != nil {
 		return diag.FromErr(err)
 	}

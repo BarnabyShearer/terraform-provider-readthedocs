@@ -1,4 +1,4 @@
-terraform-provider-readthedocs: *.go */*.go
+terraform-provider-readthedocs: *.go */*.go go.mod
 	go build .
 
 install: terraform-provider-readthedocs
