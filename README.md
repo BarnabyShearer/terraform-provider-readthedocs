@@ -4,4 +4,3 @@
 
 Register readthedocs.org projects.
 
-
