@@ -89,6 +89,18 @@ func resourceProject() *schema.Resource {
 				Optional:    true,
 				Description: "Build PRs.",
 			},
+			"organization": {
+				Type:        schema.TypeString,
+				Default:     "",
+				Optional:    true,
+				Description: "ReadTheDocs for Business organization where the project should be created. Only valid when using Read The Docs for Business.",
+			},
+			"teams": {
+				Type:        schema.TypeString,
+				Default:     "",
+				Optional:    true,
+				Description: "Team slugs the project will belong to. Only valid when using Read The Docs for Business.",
+			},
 		},
 	}
 }
@@ -104,6 +116,8 @@ func updateReqest(d *schema.ResourceData) rtd.CreateUpdateProject {
 			Homepage:            "",
 			ProgrammingLanguage: d.Get("programming_language").(string),
 			Language:            d.Get("language").(string),
+			Organization:        d.Get("organization").(string),
+			Teams:               d.Get("teams").(string),
 		},
 		DefaultVersion:        d.Get("default_version").(string),
 		DefaultBranch:         d.Get("default_branch").(string),
