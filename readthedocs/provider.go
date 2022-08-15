@@ -33,5 +33,5 @@ func Provider() *schema.Provider {
 }
 
 func providerConfigure(ctx context.Context, d *schema.ResourceData) (interface{}, diag.Diagnostics) {
-	return rtd.NewClient(d.Get("token").(string), d.Get("base_url").(string)), nil
+	return rtd.NewClientWithURL(d.Get("token").(string), d.Get("base_url").(string)), nil
 }
