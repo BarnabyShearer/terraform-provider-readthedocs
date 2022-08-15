@@ -25,24 +25,26 @@ resource "readthedocs_project" "efm8" {
 
 ### Required
 
-- **name** (String) Project name.
-- **repository** (String) URL of repository to clone documentation from.
+- `name` (String) Project name.
+- `repository` (String) URL of repository to clone documentation from.
 
 ### Optional
 
-- **analytics_code** (String) Google Analytics code for tracking views.
-- **analytics_disabled** (Boolean) Disable Google Analytics.
-- **default_branch** (String) Branch to build from.
-- **default_version** (String) Version of documentation to show by default.
-- **external_builds_enabled** (Boolean) Build PRs.
-- **language** (String) Given like `en`, `fr` etc.
-- **programming_language** (String) Given like `py`, `js` etc.
-- **show_version_warning** (Boolean) Warn when viewing old versions.
-- **single_version** (Boolean) Only show single version.
+- `analytics_code` (String) Google Analytics code for tracking views.
+- `analytics_disabled` (Boolean) Disable Google Analytics.
+- `default_branch` (String) Branch to build from.
+- `default_version` (String) Version of documentation to show by default.
+- `external_builds_enabled` (Boolean) Build PRs.
+- `language` (String) Given like `en`, `fr` etc.
+- `organization` (String) ReadTheDocs for Business organization where the project should be created. Only valid when using Read The Docs for Business.
+- `programming_language` (String) Given like `py`, `js` etc.
+- `show_version_warning` (Boolean) Warn when viewing old versions.
+- `single_version` (Boolean) Only show single version.
+- `teams` (String) Team slugs the project will belong to. Only valid when using Read The Docs for Business.
 
 ### Read-Only
 
-- **id** (String) The Slug of the project.
+- `id` (String) The Slug of the project.
 
 ## Import
 

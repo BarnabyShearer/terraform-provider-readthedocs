@@ -31,4 +31,5 @@ provider "readthedocs" {
 
 ### Optional
 
-- **token** (String) API Token for authentication.
+- `base_url` (String) ReadTheDocs API base URL. Can be used to target the Read The Docs For Business API.
+- `token` (String) API Token for authentication.
