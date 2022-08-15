@@ -1,7 +1,7 @@
 cloud.google.com/go v0.26.0/go.mod h1:aQUYkXzVsufM+DwF1aE+0xfcU+56JwCaLick0ClmMTw=
 cloud.google.com/go v0.34.0/go.mod h1:aQUYkXzVsufM+DwF1aE+0xfcU+56JwCaLick0ClmMTw=
-github.com/BarnabyShearer/readthedocs/v3 v3.0.9 h1:PBHvkOijWgfManyjvn5UzqWGQBCePVA5W1szMxl1/c0=
-github.com/BarnabyShearer/readthedocs/v3 v3.0.9/go.mod h1:9Cbd6gcXkhM3MEOXzyquCs3nUurFSHuq9hFbcQfG+44=
+github.com/BarnabyShearer/readthedocs/v3 v3.0.10 h1:37DvonTR7qBIXYbEZvF9rT+WGg5dWHah+Q8XndE8FoA=
+github.com/BarnabyShearer/readthedocs/v3 v3.0.10/go.mod h1:9Cbd6gcXkhM3MEOXzyquCs3nUurFSHuq9hFbcQfG+44=
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
 github.com/Masterminds/goutils v1.1.0/go.mod h1:8cTjp+g8YejhMuvIA5y2vz3BpJxksy863GQaJW2MFNU=
 github.com/Masterminds/goutils v1.1.1 h1:5nUrii3FMTL5diU80unEVvNevw1nH4+ZV4DSLVJLSYI=

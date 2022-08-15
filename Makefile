@@ -1,3 +1,6 @@
+OS=$(shell go env GOOS)
+ARCH=$(shell go env GOARCH)
+
 terraform-provider-readthedocs: *.go */*.go go.mod docs/index.md test
 	go build .
 
@@ -11,8 +14,8 @@ testacc: test
 	TF_ACC=1 go test ./...
 
 install: terraform-provider-readthedocs
-	mkdir -p ~/.terraform.d/plugins/registry.terraform.io/BarnabyShearer/readthedocs/0.1.0/linux_amd64
-	cp $+ ~/.terraform.d/plugins/registry.terraform.io/BarnabyShearer/readthedocs/0.1.0/linux_amd64
+	mkdir -p ~/.terraform.d/plugins/registry.terraform.io/BarnabyShearer/readthedocs/0.1.0/$(OS)_$(ARCH)
+	cp $+ ~/.terraform.d/plugins/registry.terraform.io/BarnabyShearer/readthedocs/0.1.0/$(OS)_$(ARCH)
 	-rm .terraform.lock.hcl
 	terraform init
 

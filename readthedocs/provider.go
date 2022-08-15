@@ -18,6 +18,12 @@ func Provider() *schema.Provider {
 				DefaultFunc: schema.EnvDefaultFunc("READTHEDOCS_TOKEN", nil),
 				Description: "API Token for authentication.",
 			},
+			"base_url": {
+				Type:        schema.TypeString,
+				Optional:    true,
+				DefaultFunc: schema.EnvDefaultFunc("READTHEDOCS_BASE_URL", "https://readthedocs.org/api/v3"),
+				Description: "ReadTheDocs API base URL. Can be used to target the Read The Docs For Business API.",
+			},
 		},
 		ResourcesMap: map[string]*schema.Resource{
 			"readthedocs_project": resourceProject(),
@@ -27,5 +33,5 @@ func Provider() *schema.Provider {
 }
 
 func providerConfigure(ctx context.Context, d *schema.ResourceData) (interface{}, diag.Diagnostics) {
-	return rtd.NewClient(d.Get("token").(string)), nil
+	return rtd.NewClientWithURL(d.Get("token").(string), d.Get("base_url").(string)), nil
 }
